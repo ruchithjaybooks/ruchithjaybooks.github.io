@@ -1,3 +1,18 @@
+// Loading Screen
+window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    if (loadingScreen) {
+        // Add a small delay to ensure smooth transition
+        setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+            // Remove from DOM after transition completes
+            setTimeout(() => {
+                loadingScreen.remove();
+            }, 500);
+        }, 800); // Show loading screen for at least 800ms
+    }
+});
+
 // Auto-update copyright year
 document.addEventListener('DOMContentLoaded', function() {
     const currentYearElement = document.getElementById('currentYear');
