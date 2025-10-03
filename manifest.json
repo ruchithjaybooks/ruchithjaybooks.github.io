@@ -1,0 +1,21 @@
+{
+    "name": "RJ Books - RuchithJay Books",
+    "short_name": "RJ Books",
+    "description": "E-books and Web novels by RuchithJay",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f5f5f0",
+    "theme_color": "#8B4513",
+    "icons": [
+        {
+            "src": "images/RuchithJayLogo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/RuchithJayLogo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
