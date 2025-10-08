@@ -145,7 +145,7 @@ This project is private and proprietary. All rights reserved by Ruchith Jay.
 
 For inquiries about books, collaborations, or website feedback:
 
-- **Email**: Contact through social media platforms
+- **Email**: ruchithjaybooks@gmail.com
 - **Website**: [ruchithjaybooks.github.io](https://ruchithjaybooks.github.io)
 - **Social Media**: See links above
 
