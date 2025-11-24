@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.buymeacoffee.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+    
     <title>RJ Books</title>
     
     <!-- Basic Meta Tags -->
@@ -372,7 +376,7 @@
         <div class="footer-content">
             <img src="images/footer.png" alt="Footer Background" class="footer-bg">
             <div class="footer-info">
-                <p>© <span id="currentYear"></span> | ruchithjaybooks@gmail.com | +94 777 695 020</p>
+                <p>© <span id="currentYear"></span> | <span id="contactEmail"></span> | <span id="contactPhone"></span></p>
                 <p class="footer-signature">RuchithJay Books by RuchithJay</p>
             </div>
         </div>
@@ -401,6 +405,27 @@
                 copyrightStrip.classList.add('hidden');
                 body.classList.remove('copyright-visible');
             });
+            
+            // Contact information obfuscation
+            function deobfuscateContact() {
+                // Email obfuscation (simple split and join)
+                const emailParts = ['ruchithjaybooks', '@', 'gmail', '.', 'com'];
+                const email = emailParts.join('');
+                
+                // Phone obfuscation (reverse and split)
+                const phoneParts = ['020', ' 695', ' 777', '+94'];
+                const phone = phoneParts.reverse().join('');
+                
+                // Populate contact elements
+                const emailElement = document.getElementById('contactEmail');
+                const phoneElement = document.getElementById('contactPhone');
+                
+                if (emailElement) emailElement.textContent = email;
+                if (phoneElement) phoneElement.textContent = phone;
+            }
+            
+            // Initialize contact info after a small delay to prevent bots
+            setTimeout(deobfuscateContact, 100);
         });
     </script>
 </body>

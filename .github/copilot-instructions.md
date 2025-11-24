@@ -127,6 +127,14 @@ php -S localhost:8000
 - **Social sharing**: Open Graph images sized 1200x630
 - **Progressive enhancement**: Base functionality without JavaScript
 - **Lazy loading**: Consider for book cover images if collection grows
+- **Security**: Content Security Policy (CSP) implemented to prevent XSS attacks
+
+## Security Considerations
+- **CSP Policy**: Restricts external resources to trusted domains only
+- **External dependencies**: Buy Me a Coffee widget from cdnjs.buymeacoffee.com
+- **Safe practices**: `noopener noreferrer` on external links, frame-ancestors 'none'
+- **Asset sources**: Google Fonts (fonts.googleapis.com, fonts.gstatic.com), placeholder images (placehold.co)
+- **Contact obfuscation**: Email and phone number are JavaScript-generated to prevent bot harvesting
 
 ## Common Modifications
 - **Theme colors**: Update CSS custom properties and manifest.json
